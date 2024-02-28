@@ -1,0 +1,135 @@
+
+.admin{
+    .inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: fit-content;
+        padding: 20px;
+        h2{
+            font-size: 40px;
+            color: #294150;
+        }
+        .input{
+            width: 40%;
+            padding-left: 5px;
+            border: 1px solid gray;
+            display: flex;
+            align-items: center;
+            border-radius: 7px;
+            input{
+                border: none;
+                width: 95%;
+                padding: 10px;
+                border-radius:inherit ;
+                outline: none;
+            };
+        }
+        button{
+            background:  rgb(119, 115, 174);
+            border: none;
+            outline: none;
+            color: rgb(15, 15, 15);
+            cursor: pointer;
+            font-size: 20px;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px rgb(80, 63, 50);
+            transition-duration: 200ms
+        };
+        button:hover{
+            transform: scale(1.2)
+            
+        };
+        .main_frame{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: fit-content;
+            flex-wrap: wrap;
+            gap: 79px;
+            padding: 20px;
+    
+            #frame{
+                height: fit-content;
+                width: 20%;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+                #votes{
+                    background:  #41657c;
+                    color: rgb(243, 239, 239);
+                    font-size: 20px;
+                    padding: 5px 7px;
+                    border-radius: 10px;
+                    box-shadow: 1px 1px 1px 1px rgb(80, 63, 50);   
+                }
+    
+                #image_frame{
+                    height: 250px;
+                    width: 80%;
+                    border: 5px solid  #36566a;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 1px 1px 1px 1px rgb(80, 63, 50);
+                    img{
+                        object-fit: cover;
+                        max-height: 100%;
+                        min-height: 100%;
+                        max-width: 100%;
+                        min-width: 100%;
+                    };
+                }
+                h3{
+                    font-size: 30px;
+                    color :#294150;
+                };
+                span{
+                    font-size: 20px;
+                    color :#294150;
+                };
+                .buttons{
+                    padding-top: 5px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    cursor: pointer;
+                    
+                    #update , #delete{
+                        padding: 10px 20px;
+                        background-color: rgb(27, 111, 43);
+                        border-radius: 10px;
+                        border: none;
+                        outline: none;
+                        color: white;
+                        transition-duration: 200ms;
+                    };
+                    #delete{
+                        background-color: rgb(173, 50, 37);
+                    }; 
+                    #update #delete :hover{
+                        transform: scale(1.2)
+                        
+                    };
+                    
+                };
+                
+            };
+            
+        };
+    };
+};
+
+
+
+
+

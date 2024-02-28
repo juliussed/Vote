@@ -1,0 +1,93 @@
+
+// this is a fuction for dark mode feature on the Layout page //
+
+
+// this is the color theme i chose for both light option and darkmode option
+$themes:(
+    light:(
+        textColor:#171616,
+        bg:rgb(255, 255, 255),
+        iconColor:(rgb(241, 236, 236)),
+        logo:darkblue,
+        bgSoft:#eeebeb,
+        textColorsoft:black,
+        border:1px solid rgb(167, 167, 161),
+        shadow:1px 4px 4px 1px #3c3131,
+        buttonTextColor:#353535,
+        buttonbgColor:#26bed5,
+        cardborder: 5px solid #625f5f,
+        imgborder:6px solid #522B5B,
+        cardhover:rgb(223, 120, 120),
+        voteborder:5px solid rgb(94, 69, 163),
+        navbarbg:#854F6C,
+        bannerbg:rgb(94, 69, 163),
+    ),
+    dark:(
+        textColor:#bbb7b7,
+        bg:#2b2b2b,
+        iconColor:(rgb(200, 198, 198)),
+        logo:white,
+        bgSoft:#333,
+        textColorsoft:lightgray,
+        border:1px solid #faf8f8,
+        shadow:1px 0px 5px 1px rgb(37, 35, 35),
+        buttonTextColor:#353535,
+        buttonbgColor:rgb(38, 190, 213),
+        cardborder: 5px solid #faf8f8,
+        imgborder:6px solid rgb(235, 235, 235),
+        cardhover:rgb(106, 197, 174),
+        voteborder:5px solid rgb(197, 195, 195),
+        navbarbg:#2b2b2b,
+        bannerbg:rgb(43, 34, 63),
+    ),
+);
+
+// implementing my color theme above into a function that will be 
+// called whenever the darkmode button is clicked on the navbar
+
+@mixin themify($themes){
+    @each $theme, $map in $themes{
+        .theme-#{$theme} & {
+            $theme-map :() !global;
+            @each $key , $submap in $map{
+                $value: map-get(map-get($themes ,$theme), "#{$key}");
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key: $value,
+                    )
+                )   !global;    
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+};
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
+// styling for the layout
+
+#layout{
+    @include themify($themes){
+        background-color: themed("bgSoft");
+        height: 100vh;
+        width: 100%;
+        top: 65px;
+        position: fixed;
+    }
+};
+
+@mixin mobile{
+    @media (max-width:780px){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (max-width:1080px){
+        @content;
+    }
+}
+

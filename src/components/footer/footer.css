@@ -1,0 +1,129 @@
+
+footer {
+    background-color: transparent;
+    color: white;
+    padding: 20px 0;
+    border-top: 1px solid gray;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+    
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 30px;
+    background-color: transparent;
+    
+}
+.footer-content2 {
+    padding: 50px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid gray;
+    background-color: transparent;
+}
+
+.footer-section {
+    width: 20%; /* Adjust as needed based on your layout */
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+#footerimg {
+    width: 20%; /* Adjust as needed based on your layout */
+    margin-bottom: 20px;
+    background-color: rgb(10, 18, 24);
+    padding: 5px 10px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 1px rgb(26, 48, 49);
+    transform: rotate(-15deg);
+}
+.inner_section{
+    width: 70%;
+    flex-direction: column;
+    background-color: transparent;
+}
+.inner{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: transparent;
+}
+.language{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgb(220, 215, 215);
+    width: 15%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    color: rgb(0, 0, 0);
+}
+.language:hover{
+    background-color: #548aac;
+    color: rgb(246, 238, 238);
+    border-radius: 7px;
+    transition-duration: 500ms;
+    cursor: pointer;
+}
+.socialmedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    width: 50%;
+    margin-bottom: 30px;
+}
+.lists{
+    text-decoration: none;
+    list-style: none;
+    background-color: transparent;
+}
+.list{
+    text-decoration: none;
+    list-style: none;
+    background-color: transparent;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
+    color: black;
+}
+img{
+    width: 30%;
+    
+}
+li{
+    font-size: 1rem;
+    margin: 0;
+    color: rgb(34, 34, 34);
+    margin-bottom: 10px; 
+    padding: 5px; 
+}
+li:hover{
+    background-color: #548aac;
+    color: rgb(246, 238, 238);
+    border-radius: 7px;
+    transition-duration: 500ms;
+}
+
+.footer.active{
+    background:  linear-gradient(to left, #67acd7,#294150 );
+    transition-duration: 2000ms ease-in; 
+}
